@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do App</title>
+    <!-- Jinja syntax to link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            
+            <!-- Updated Header: User ka dynamic name aur Logout button -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="margin-bottom: 0;">{{ name }} ki list <i class="fa-solid fa-clipboard-list"></i></h2>
+                <a href="/logout" style="color: #ff5e62; text-decoration: none; font-weight: bold; background: rgba(255,255,255,0.5); padding: 5px 15px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">Logout</a>
+            </div>
+
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add a new task...">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- Tasks ab JavaScript aur Flask API ke through aayenge -->
+            </ul>
+        </div>
+    </div>
+    <!-- Jinja syntax to link JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

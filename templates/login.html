@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app" style="text-align: center;">
+            <h2 style="justify-content: center;">Login</h2>
+            <form action="/login" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="row" style="margin-bottom: 0;">
+                    <input type="text" name="mobile" placeholder="Mobile Number" required>
+                </div>
+                <div class="row" style="margin-bottom: 0;">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" style="width: 100%;">Login</button>
+            </form>
+            <p style="margin-top: 20px;">Naye user hain? <a href="/signup" style="color: #ff5e62;">Signup karein</a></p>
+        </div>
+    </div>
+</body>
+</html>
